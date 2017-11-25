@@ -1,0 +1,1160 @@
+        /* GLOBAL */
+
+* {
+}
+
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background-color: #575757;
+    counter-reset: item;
+}
+.moerk_baggrund {
+    background-color: #393939;
+}
+
+a {
+    color: #fff;
+}
+#anchor_popquiz, #anchor_bordfodbold {
+    margin-top: -75px;
+    padding-bottom: 75px; 
+    display: block; 
+}
+#anchor_historie {
+    margin-top: -60px;
+    padding-bottom: 60px; 
+    display: block;
+}
+
+
+/* HEADER */
+
+header {
+    background-color: #393939;
+    box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, .8);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #393939;
+}
+
+header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+}
+
+header li a:hover,
+header .menu-btn:hover {
+    background-color: #fd3e39;
+}
+
+header #logo_boks {
+    display: block;
+    padding-top: 5px;
+    text-align: center;
+    width: 155px;
+}
+
+
+/* MENU */
+
+header .menu {
+    clear: both;
+    max-height: 0px;
+    transition: max-height .2s ease-out;
+    margin: 0 -1px 0 -1px;
+}
+
+
+/* MENU ICON */
+
+header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+header .menu-icon .navicon {
+    background: #fff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+header .menu-icon .navicon:before,
+header .menu-icon .navicon:after {
+    background: #fff;
+    content: '';
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+
+header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+
+/* MENU BUTTON */
+
+header .menu-btn {
+    display: none;
+}
+
+header .menu-btn:checked~.menu {
+    max-height: 300px;
+}
+
+header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+
+/* FORSIDE CONTENT */
+
+#forside_mobil {
+    padding-top: 63px;
+    margin-bottom: -34px;
+}
+
+#forside_mobil img {
+    width: 100%;
+}
+
+#shots {
+    text-align: center;
+    display: block;
+    width: 100%;
+    background-color: #ba2f2c;
+    }
+#shots h1 {
+    padding-top: 15px;
+    color: #fff;
+    font-size: 35px;
+}
+#shots p {
+    color: #fff;
+    font-size: 18px;
+    margin-top: -35px;   
+}
+#shots img {
+    width: 100%;
+}
+/* LÆS MERE RØD */
+
+.laes_mere_roed {
+    text-align: center;
+}
+.laes_mere_roed a {
+    font-weight: 500;
+    color: #fff;
+    padding: 2px 5px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 0%;
+    transition: background-color 0.2s ease;
+    border: 1px solid #ab4441;
+    outline: 3px solid #fff;
+}
+.laes_mere_roed a:hover {
+    background-color: #fff;
+    color: #ab4441;
+}
+/* LÆS MERE GRÅ */
+
+.laes_mere_graa {
+    text-align: center;
+}
+.laes_mere_graa a {
+    font-weight: 500;
+    color: #fff;
+    padding: 2px 5px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 0%;
+    transition: background-color 0.2s ease;
+    border: 1px solid #575757;
+    outline: 3px solid #fff;
+}
+.laes_mere_graa a:hover {
+    background-color: #fff;
+    color: #575757;
+}
+
+/* EVENTS SIDE */
+
+#events_headline {
+    padding-top: 45px;
+    background-color: #ba2f2c;
+    box-shadow: inset 0 0 6px #000;
+}
+#events_headline h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+#events_container {
+    display: flex;
+}
+
+/* UGENTLIGE */
+#ugentlige {
+    width: 50%;
+    text-align: center;
+    color: #fff;
+    margin-top: -40px;
+}
+
+#ugentlige h1 {
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+#ugentlige p {
+    text-align: left;
+    padding: 0 20px;
+}
+#events_popquiz {
+    box-shadow: inset 0 0 10px #000;
+    padding-top: 5px;
+    height: 300px;
+    background-color: #ba2f2c;
+}
+#events_popquiz a {
+    text-decoration: none;
+    border: 1px solid #ba2f2c;
+    outline: 2px solid #fff;
+    padding: 2px 8px;
+    transition: background-color 0.2s ease;
+}
+#events_popquiz a:hover {
+    color: #ba2f2c;
+    background-color: #fff;
+    
+}
+#events_bordfodbold {
+    box-shadow: inset 0 0 10px #000;
+    padding-top: 5px;
+    height: 300px;
+    background-color: #474747;
+}
+
+/* STØRRE BEGIVENHEDER */
+#stoerre {
+    width: 50%;
+    text-align: center;
+    color: #fff;
+    margin-top: -40px;
+}
+#stoerre h1 {
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+#stoerre p {
+    text-align: left;
+    padding: 0 20px;
+}
+#events_bold {
+    box-shadow: inset 0 0 10px #000;
+    padding-top: 5px;
+    height: 300px;
+    background-color: #474747;
+}
+#events_bold ul {
+    text-align: left;
+    margin: 0 auto;
+}
+#events_pubcrawl {
+    box-shadow: inset 0 0 10px #000;
+    padding-top: 5px;
+    height: 300px;
+    background-color: #ba2f2c;
+}
+
+/* PRISER */
+
+#priser {
+    padding-top: 70px;
+    width: 100%;
+    text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+    height: 110px;
+    background-color: #393939;
+    position: relative;
+    z-index: 1;
+}
+#footer_pc {
+    width: 100%;
+    text-align: center;
+    padding-top: 1px;
+}
+#facebook {
+    width: 100%;
+    margin-top: 25px;
+    text-align: center;
+}
+#facebook img {
+    filter: grayscale(100%);
+    transition: 0.2s ease;
+}
+#facebook img:hover {
+    filter: none;
+}
+footer p {
+    margin-bottom: -15px;
+    color: #fff;
+}
+
+/* OM VINSTUEN */
+    
+#ordensreglement {
+    background-color: #ba2f2c;
+    margin: 0 50px;
+    color: #fff;
+}
+#ordensreglement h1 {
+    text-align: center;
+    font-size: 40px;
+}
+#ordensreglement ol {
+    margin-left: -30px;
+    list-style: none;
+}
+#historien h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+/* REGLERNE */
+    #regler {
+        padding-top: 60px;
+    }
+    #regler h1, h2 {
+        text-align: center;
+        color: #fff;
+        font-size: 40px;
+    }
+    #regler ol {
+        list-style: none;
+    }
+    #regler li {
+        color: #fff;
+        padding: 5px;
+    }
+    #regler p {
+    color: #fff;
+    text-align: center;
+    margin: 0 200px;
+    }
+    .list_number_regler {
+        float: left;
+        counter-increment: item;
+    }
+    .list_number_regler:before {
+        margin: -8px 5px 0 auto;
+        content: counter(item);
+        background: #393939;
+        border-radius: 100%;
+        border: 3px solid #fff;
+        padding: 4px 3px 3px 3px;
+        color: white;
+        width: 20px;;
+        text-align: center;
+        display: inline-block;
+    }
+    #liste_shots {
+        text-align: center;
+        padding: 0;
+    }
+
+/* TABLET & PC ---------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media (min-width: 768px) {
+    header li {
+        float: left;
+    }
+    header li a {
+        padding: 20px 30px;
+    }
+    header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    header .menu-icon {
+        display: none;
+    }
+    header #logo_boks {
+        position: absolute;
+    }
+    header #logo_boks img {
+        width: 100%;
+        margin: -5px 0 0 -50px;
+    }
+    #logo3 {
+        display: none;
+    }
+    .current {
+        border-bottom: 3px solid #fd3e39;
+        padding-bottom: 17px;
+    }
+    #forside_billede {
+        text-align: center;
+        padding-top: 59px;
+        margin-left: -1px;
+        margin-bottom: -4px;
+    }
+    #forside_billede img {
+        width: 100%;
+    }
+    #forside_mobil {
+        display: none;
+    }
+    .forside_bokse {
+        display: flex;
+    }
+     #popquiz {
+        box-shadow: inset 0 0 6px #000;
+        display: block;
+        text-align: center;
+        height: 300px;
+        width: 50%;
+        background-image: url(../images/quiz.png);
+        background-position: center;
+    }
+    #popquiz h1 {
+        text-shadow: 1px 1px 4px #000;
+        margin: 100px;
+        margin-bottom: -15px;
+        color: #fff;
+        font-size: 30px;
+    }
+    #popquiz p {
+        text-shadow: 1px 1px 3px #000;
+        text-align: center;
+        color: #fff;
+        font-size: 18px;
+    }
+    #bordfodbold {
+        box-shadow: inset 0 0 6px #000;
+        background-image: url(../images/bordfodbold.png);
+        background-position: center;
+        display: block;
+        text-align: center;
+        height: 300px;
+        width: 50%;
+    }
+    #bordfodbold h1 {
+        text-shadow: 1px 1px 4px #000;
+        margin: 100px;
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: -28px;
+    }
+    #bordfodbold h2 {
+        margin-bottom: -15px;
+        font-size: 28px;
+        color: #fff;
+    }
+    #bordfodbold p {
+        text-shadow: 1px 1px 3px #000;
+        color: #fff;
+        font-size: 18px;
+        padding: 0 10px;
+    }
+    #priser_forside {
+        box-shadow: inset 0 0 6px #000;
+        background-image: url(../images/priser.png);
+        background-position: center;
+        height: 300px;
+        width: 50%;
+        text-align: center;
+    }
+    #priser_forside h1 {
+        text-shadow: 1px 1px 4px #000;
+        margin: 100px;
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: -15px;
+    }
+    #priser_forside p {
+        text-shadow: 1px 1px 3px #000;
+        color: #fff;
+        font-size: 18px;
+    }
+    #lej_vinstuen {
+        box-shadow: inset 0 0 6px #000;
+        background-image: url(../images/leje.png);
+        background-position: center;
+        height: 300px;
+        width: 50%;
+        text-align: center;
+    }
+    #lej_vinstuen h1 {
+        text-shadow: 1px 1px 4px #000;
+        margin: 100px;
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: -15px;
+    }
+    #lej_vinstuen p {
+        text-shadow: 1px 1px 3px #000;
+        color: #fff;
+        font-size: 18px;
+        padding: 0 10px;
+    }
+    
+    /* EVENTS */
+    #events_popquiz {
+        height: 340px;
+        margin: 0 5px 10px 10px;
+        background-image: url(../images/events_baggrund_roed.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #events_bordfodbold {
+        height: 340px;
+        margin: 10px 5px 10px 10px;
+        background-image: url(../images/events_baggrund_graa.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #events_bold {
+        height: 340px;
+        margin: 0 10px 10px 5px;
+        background-image: url(../images/events_baggrund_graa.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #events_pubcrawl {
+        height: 340px;
+        margin: 10px 10px 10px 5px;
+        background-image: url(../images/events_baggrund_roed.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #ugentlige h2 {
+    font-size: 40px;
+    margin: 10px;
+    }
+    #stoerre h2 {
+    font-size: 40px;
+    margin: 10px;
+    }
+    .laes_mere_graa {
+        vertical-align: bottom;
+    }
+    #shots {
+        margin-top: -30px;
+    }
+    #shots img {
+        width: 50%;
+    }
+    #footer_mobil {
+        display: none;
+    }
+    /* KONTAKT */
+   
+    #kontakt_info {
+        width: 50%;
+        background-color: #494949;
+        padding-top: 80px;
+        height: 250px;
+        box-shadow: inset 0 0 6px #000;
+    }
+    #kontakt_info h1 {
+        display: none;
+    }
+
+    #kontakt_info_p {
+        color: white;
+        width: 100%;
+        font-size: 25px;
+        text-align: center;
+    }
+    #iframe_pc {
+        width: 50%;
+        height: 780px;
+        float: right;
+        margin-top: 60.5px;
+        z-index: -1;
+    }
+    #iframe_mobil {
+        display: none;
+    }
+    #kontakt_booking {
+        width: 50%;
+        margin-top: 80px;
+        text-align: center;
+        background-color: #ba2f2c;
+        box-shadow: inset 0 0 6px #000;
+        background-image: url(../images/booking.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        
+    }
+    #kontakt_booking h2 {
+        display: none;
+    }
+    #bookoverskrift {
+        font-family: helvetica, sans-serif;
+        color: white;
+        text-align: left;
+    }
+    .backki {
+        text-align: center;
+        width: 70%;
+        padding: 20px;
+        border: 2px;
+        margin: -75px auto 0 auto;
+    }
+    .backki p {
+        margin-bottom: 2px;
+        text-shadow: 2px 1px 2px #000; 
+    }
+    .backki input {
+        border: 2px solid #575757;
+    }
+    #send_knap {
+        border: 1px solid #ba2f2c;
+        outline: 2px solid #fff;
+        background-color: #ba2f2c;
+        color: #fff;
+        cursor: pointer;
+        padding: 5px;
+        font-size: 15px;
+        margin-top: 15px;
+        font-weight: 500;
+        transition: background-color 0.2s ease;
+    }
+    #send_knap:hover {
+        background-color: #fff;
+        color: #ba2f2c;
+    }
+    
+    /* OM VINSTUEN */
+    #ordensreglement {
+        margin: 0;
+        padding: 55px 80px 10px 80px; 
+    }
+    #ordensreglement li {
+        padding: 5px;
+    }
+    #ordensreglement a {
+        display: none;
+    }
+    .list_number {
+        float: left;
+        counter-increment: item;
+    }
+    .list_number:before {
+        margin: -8px auto 0 auto;
+        content: counter(item);
+        background-color: #ba2f2c;
+        border-radius: 100%;
+        border: 3px solid #fff;
+        padding: 4px 3px 3px 3px;
+        color: white;
+        width: 20px;;
+        text-align: center;
+        display: inline-block;
+    }
+    #peace {
+        float: right;
+        margin: 20px; 10% 0 0;
+    }
+    #historien {
+        color: #fff;
+        margin: 0 120px;
+    }
+    #historien h1 {
+        width: 60%;
+        margin: 20px auto;
+    }
+    #vinstuen_billede {
+        text-align: center;
+        width: 100%;
+    }
+    #vinstuen_billede img {
+        width: 50%;
+    }
+    #underrubrik {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+
+/* MOBIL ---------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 767px) {
+    header #logo_boks {
+        margin: 0 auto;
+    }
+    #vinstuen_logo {
+        padding-right: 60px;
+    }
+    #logo3 {
+        position: absolute;
+        width: 55px;
+    }
+    #logo2 {
+        display: none;
+    }
+    #forside_billede {
+        display: none;
+    }
+    #popquiz {
+        box-shadow: inset 0 0 6px #000;
+        display: block;
+        text-align: center;
+        width: 100%;
+        background-color: #ba2f2c;
+        padding-bottom: 20px;
+        margin-bottom: -15px;
+    }
+    #popquiz h1 {
+        padding-top: 10px;
+        margin-bottom: -15px;
+        color: #fff;
+        font-size: 30px;
+    }
+    #popquiz p {
+        color: #fff;
+        font-size: 18px;
+        padding: 0 10px;
+    }
+    #bordfodbold {
+        background-color: #393939;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: -8px;
+    }
+    #bordfodbold h1 {
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: -28px;
+    }
+    #bordfodbold h2 {
+        font-size: 28px;
+        color: #fff;
+        margin-bottom: -10px;
+    }
+    #bordfodbold p {
+        color: #fff;
+        font-size: 18px;
+        padding: 0 10px;
+    }
+    #priser_forside {
+        background-color: #393939;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: -15px;
+        margin-bottom: -8px;
+    }
+    #priser_forside h1 {
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: -15px;
+    }
+    #priser_forside p {
+        text-shadow: 1px 1px 2px #000;
+        color: #fff;
+        font-size: 18px;
+        padding: 0 10px;
+    }
+    #lej_vinstuen {
+        box-shadow: inset 0 0 6px #000;
+        background-color: #ba2f2c;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    #lej_vinstuen h1 {
+        padding-top: 15px;
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: -15px;
+    }
+    #lej_vinstuen p {
+        color: #fff;
+        font-size: 18px;
+        padding: 0 10px;
+    }
+    #priser img {
+        width: 100%;
+    }
+    .laes_mere_roed a {
+        border: 1px solid #ba2f2c;
+    }
+    .laes_mere_roed a:hover {
+        color: #ba2f2c;
+    }
+    .laes_mere_graa a {
+        border: 1px solid #393939;
+    }
+    .laes_mere_graa a:hover {
+        color: #393939;
+    }
+    #shots {
+        box-shadow: inset 0 0 6px #000;
+    }
+    #events_container {
+        width: 100%;
+        display: block;
+    }
+    #ugentlige {
+        width: 100%;
+        margin-top: -25px;
+    }
+    #stoerre {
+        width: 100%;
+        margin-top: 0;
+    }
+    #events_popquiz {
+        height: auto;
+        padding-bottom: 15px;
+        margin: 10px;
+        background-image: url(../images/events_baggrund_roed.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #events_bordfodbold {
+        height: auto;
+        padding-bottom: 5px;
+        margin: 10px;
+        background-image: url(../images/events_baggrund_graa.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #events_bordfodbold h1 {
+        font-size: 32px;
+    }
+    #events_bold {
+        height: auto;
+        padding-bottom: 15px;
+        margin: 10px;
+        background-image: url(../images/events_baggrund_roed.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #events_pubcrawl {
+        height: auto;
+        padding-bottom: 15px;
+        margin: 10px;
+        background-image: url(../images/events_baggrund_graa.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #events_pubcrawl h1 {
+        font-size: 38px;
+    }
+    #ugentlige h2 {
+        font-size: 30px;
+        margin: 10px;
+    }
+    #stoerre h2 {
+        font-size: 30px;
+        margin: 10px;
+    }
+    footer {
+        height: 130px;
+    }
+    #footer_pc {
+        display: none;
+    }
+    #footer_mobil {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+    #footer_adresse {
+        float: left;
+    }
+    #facebook {
+        width: 20%;
+        padding: 20px 20px 20px 20px;
+        float: right;
+    }
+    #facebook img {
+    }
+    /* KONTAKT */
+    #kontakt_info {
+        box-shadow: inset 0 0 6px #000;
+        padding-top: 35px;
+        text-align: center;
+        background-color: #ba2f2c;
+        margin-bottom: -20px;
+        
+    }
+    #kontakt_info h1 {
+        color: #fff;
+        font-size: 45px;
+        margin-bottom: -10px
+    }
+    #kontakt_info p {
+        color: white;
+        font-size: 20px;
+        padding-bottom: 20px;
+    }     
+    #iframe_mobil {
+        width: 100%;
+        background-color: #ba2f2c;
+        box-shadow: 0 1px 6px #000;
+    }
+    #iframe_pc {
+        display: none;
+    }
+    #kontakt_booking {
+        box-shadow: inset 0 0 6px #000;
+        text-align: center;
+    }
+    #kontakt_booking h2 {
+        font-size: 40px;
+        color: white;
+        margin-top: -3px;
+        padding-top: 10px
+    }    
+    #bookoverskrift {
+        font-family: helvetica, sans-serif;
+        color: white;
+        text-align: left;
+    }
+    .backki {
+        width: 90%;
+        padding: 20px 0 20px 10px;
+        border: 2px;
+        margin: -40px auto 0 auto;
+    }
+    .backki p {
+        margin-bottom: 2px;
+    }
+    #send_knap {
+        border: 1px solid #575757;
+        outline: 2px solid #fff;
+        background-color: #575757;
+        color: #fff;
+        cursor: pointer;
+        padding: 5px;
+        font-size: 15px;
+        margin-top: 15px;
+        font-weight: 500;
+        transition: background-color 0.2s ease;
+    }
+    #send_knap:hover {
+        background-color: #fff;
+        color: #575757;
+    }
+
+    /* OM VINSTUEN */
+    #ordensreglement {
+        padding: 0 10px;
+        margin: 0;
+        padding: 90px 0 10px 0;
+        color: #fff;
+        text-align: center;
+    }
+    #ordensreglement h1 {
+        font-size: 25px;
+    }
+    #ordensreglement p {
+        font-size: 20px;
+    }
+    #ordensreglement li {
+        margin-top: 10px;
+    }
+    #ordensreglement a {
+        text-decoration: none;
+        border: 1px solid #ba2f2c;
+        outline: 2px solid #fff;
+        padding: 5px;
+        transition: background-color 0.2s ease;
+    }
+    #ordensreglement a:hover {
+        background-color: #fff;
+        color: #ba2f2c;
+    }
+    .list_number {
+        text-align: center;
+        counter-increment: item;
+    }
+    .list_number:before {
+        margin: 0 auto;
+        content: counter(item);
+        background: #393939;
+        border-radius: 100%;
+        border: 3px solid #fff;
+        padding: 4px 3px 3px 3px;
+        color: white;
+        width: 20px;;
+        text-align: center;
+        display: inline-block;
+    }
+    #historien {
+        color: #fff;
+    }
+    #historien section {
+        margin: 0 15px;
+    }
+    #vinstuen_billede {
+        width: 100%;
+    }
+    #vinstuen_billede img {
+        width: 100%;
+    }
+    #historien h1 {
+        text-align: center;
+        font-size: 30px;
+}
+    #peace {
+        display: none;
+    }
+    
+    /* REGLER */
+    .list_number_regler:before {
+        margin-left: -30px
+    }
+    #regler p {
+    color: #fff;
+    text-align: left;
+    margin: 0 10px;
+    }
+    
+}
+
+/* SMÅ PC SKÆRME ---------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width:1024px) and (max-width: 1280px) {
+    #events_popquiz {
+        height: 420px;
+        margin: 0 5px 10px 10px;
+        background-image: url(../images/events_baggrund_roed.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #events_bordfodbold {
+        height: 420px;
+        margin: 10px 5px 10px 10px;
+        background-image: url(../images/events_baggrund_graa.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #events_bold {
+        height: 420px;
+        margin: 0 10px 10px 5px;
+        background-image: url(../images/events_baggrund_roed.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #events_pubcrawl {
+        height: 420px;
+        margin: 10px 10px 10px 5px;
+        background-image: url(../images/events_baggrund_graa.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #ugentlige h2 {
+    font-size: 40px;
+    margin: 10px;
+    }
+    #stoerre h2 {
+    font-size: 40px;
+    margin: 10px;
+    }
+    #peace {
+        display: none;
+    }
+    #vinstuen_billede img {
+        width: 70%;
+    }
+}
+
+
+/* TABLET ---------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #events_container {
+        width: 100%;
+        display: block;
+    }
+    #ugentlige {
+        width: 100%;
+        margin-top: -25px;
+    }
+    #events_popquiz {
+        height: auto;
+        padding-bottom: 15px;
+    }
+    #events_bordfodbold {
+        height: auto;
+        padding-bottom: 5px;
+    }
+    #stoerre {
+        width: 100%;
+        margin-top: 0;
+    }
+    #events_bold {
+        height: auto;
+        padding-bottom: 15px;
+    }
+    #events_pubcrawl {
+        height: auto;
+        padding-bottom: 15px;
+    }
+    #ugentlige h2 {
+    font-size: 40px;
+    margin-bottom: 10px
+    }
+    #stoerre h2 {
+    font-size: 40px;
+    margin: -1px 0 10px 0;
+    }
+    #peace {
+        display: none;
+    }
+    #vinstuen_billede img {
+        width: 90%;
+    }
+}
